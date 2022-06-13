@@ -4,3 +4,6 @@ Esse desafio foi feito para colocar em prática habilidades aprendidas durante o
 
 Esse repositório foi criado para o primeiro Desafio de Projeto do Bootcamp.
 
+Aprendizados:
+
+- Clonagem;
