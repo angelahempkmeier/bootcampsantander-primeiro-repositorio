@@ -1,1 +1,134 @@
 Anotações relevantes sobre o curso de Git/Github
+
+GitBash: terminal para auxiliar o uso do Git.
+
+Alguns comandos:
+- dir > lista de pastas
+- cd  > navegar entre as pastas (uso de / para adentrar em outras pastas)
+- cd .. > voltar uma pasta
+- ctrl + l > limpar tela
+- git init > iniciar
+- git add > mover e primeiros versionamentos
+- git commit > criar commit
+- mkdir nomedapasta > cria pasta
+- ls > lista tudo que há dentro do diretório que estamos
+- ls -a > lista o que há de oculto
+- git nit > cria repositório
+- git status > monitora o status
+
+Ações interessantes de serem listadas
+- git add * ou git add . >
+- git commit -m "mensagem aqui"
+- mv nomearquivo.algumacoisa ./pasta/ > move
+> git add nome.algumacoisa x/ (x sendo a pasta criada) 
+> git commit -m "cria pasta x, move o arquivo para pasta x" > commitando
+> echo > readme.algumacoisa > cria-se um arquivo
+
+
+Sha1: função hash criptográfica.
+Função que devolve o Sha1: echo 'conteudo' /git hash-object --stdin
+(Estamos enviando texto e a função esperava receber arquivo, com o stdin ao final, ela entende isso.)
+
+O Git tem três tipos de objeto: Blobs, Trees, Commits.
+
+Tree armazena bloobs
+- Objeto recursivo
+- Assim como blobs, também contém metadados
+- Guarda o nome do arquivo, diferentes da blob que guarda apenas o sha
+- Objeto responsável por montar a estrutura da localização dos arquivos
+- Tree também tem sha
+
+Commit é o que junta tudo e dá sentido as informações
+- Aponta para a Tree
+- Parent é o nome dado para o último commit realizado antes do atual
+- Leva o nome do autor, leva uma mensagem e tem timestamp
+- O sha1 desse commit é o hash de toda a informação
+
+Digamos que haja uma alteração no sha do blob. Haverão alterações também no sha do tree e do commit.
+
+O que é: untracked e tracked?
+
+Untracked: nome é sugestivo o bastante
+Tracked: unmodified, modified, staged
+
+- Untracked -> Staged 
+(git add faz esse movimento diretamente)
+
+- Unmodified -> Modified (edição de arquivo que não é mais untracked)
+- Modified -> Staged (edição novamente)
+
+- Unmodified -> Untracked (arquivo que não sofreu mudança e foi removido)
+
+Importante: Staged se prepara para fazer parte de um commit
+Ao dar commit em um Staged, esse commit retorna os arquivos para unmodified para começar novamente o ciclo. Ele salva um
+snapshot do arquivo dentro do commit.
+
+-----------------------------------------------------------------------------------------------------------------------
+SERVIDOR: Remote Repository (GitHub)
+
+AMBIENTE DE DESENVOLVIMENTO
+Working Directory
+Staging Area
+Local Repository (composto apenas por commits, quando faz commit ele integra o repositório local)
+
+Untracked > (git add) > Stage
+Modified > (git add) > Stage
+Esse caminho foi: Working Directory > Staging Area
+
+Staged > (commit) > Unmodified
+Esse caminho foi: Staging Area > Local Repository
+
+----------------------------------------------------------------------------------------------------------------------
+
+Quando movemos algum arquivo de pasta utilizando o comando mv e adicionamos para outra pasta criada, aparece uma informação no git status falando que deletamos o arquivo que haviamos mudado de pasta, pois essa ação não está ainda commitada. Ou seja, o git ainda não conhece essa nova pasta criada. É necessário colocar esse arquivo na Staging Area utilizando o comando git add.
+> git add nome.algumacoisa x/ (x sendo a pasta criada)
+Agora, precisamos commitar
+> git commit -m "cria pasta x, move o arquivo para pasta x"
+Bom, para criar um arquivo
+> echo > readme.algumacoisa
+
+Quando dermos um git status, ele irá mostrar que o arquivo readme.algumacoisa é untracked. Precisamos mover esse untracked para o strage. Como é feito isso? Segue o git add.
+> git add * > esse * pega tudo que no Working Directory que foi modificado para commitar
+Agora, commitando
+> git commit -m "adicionando index" > por ex, se o que tivesse contido no readme.algumacoisa fosse um index
+
+Working Directory > (git add) > Staging Area
+Staging Area > (git commit -m) > Local Repository 
+
+-------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------TRABALHANDO COM O GITHUB----------------------------------------------------
+O número ao lado no username é o início do sha.
+
+- git config --list > verifica email e username
+- git config --global --unset user.email "meuemail@email"
+- git config --global --unset user.name "meuuser"
+- git remote add origin https://meurepositoriocopiado >>> apelidei o meu repositorio de origin pra nao ter que ficar copiando e colocando várias vezes
+- git remote -v > listas de repositórios remotos cadastrados
+- git push origin master >>> empurra o repositório para a branch
+- git pull origin master > une versões
+
+
+
+Bom, criou-se um repositório no GitHub e agora quer-se acrescentar arquivos.
+- Copia o endereço do repositório
+- Git Bash
+> git remote add origin https://meurepositoriocopiado >>> apelidei o meu repositorio de origin pra nao ter que ficar copiando e colocando várias vezes
+> git remote -v > listas de repositórios remotos cadastrados
+SEMPRE dar git status para verificar que não há pendências no repositório
+> git push origin master >>> empurra o repositório para a branch
+Se dermos refresh na página do github já aparecerá nosso repositório
+
+RESOLVENDO CONFLITOS
+Caso haja um rejected por versões diferentes
+> git pull origin master > une versões
+
+Conflito merge
+- Organizar o arquivo apagando caracteres bugados na mão mesmo
+- git status >>> (both modified)
+- git add *
+- git commit -m "resolvendo conflitos"
+- git push origin master
+
+BAIXAR REPOSITÓRIOS
+- Copiar url
+- git clone copiaurlaqui
