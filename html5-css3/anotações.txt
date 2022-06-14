@@ -1,1 +1,68 @@
+ANOTAÇÕES AULA DE HTML - BOOTCAMP SANTANDER
 
+Htlm foi criado em 1991 pelo Tim Berners-Lee - a versão foi apresentada nesse ano, embora ele já havia iniciado o processo  de desenvolvimento do html anos antes.
+
+A versão HTML5 - utilizada por nós no curso - é datada de 2014.
+
+Um elemento HTML:
+- <h1 class="titulo">Titulo</h1>
+> <h1 ...>: abrindo a tag
+> class="Titulo": atributo
+> Titulo: conteudo
+> </h1>: fechando a tag
+
+Estrutura Básica:
+<!DOCTYPE html> (não é elemento html, apenas diz ao navegador o que estamos escrevendo)
+<html>
+   <head>
+     <meta>
+     <title></title>
+   </head>
+   <body>
+   </body>
+</html>
+
+Elemento contém: tag de abertura e seus atributos, conteúdo, tag de fechamento
+UTF-8 - charset (codificacao de caractere)
+<body>: todo conteúdo visível ao usuário
+
+Semântica:
+- <section>: seção genérica
+- <header>: cabeçalho (normalmente contém logotipo, menus, campos de busca...)
+- <article>: conteúdo independente e de maior relevância
+- <aside>: engloba conteúdos relacionados ao conteúdo principal
+- <footer>: rodapé
+- <h1>-<h6>: titulos etc. Detalhe: só pode existir um h1 por página
+
+Textos e links: 
+- <p>conteudo</p>: ele representa um paragrafo, porém não é necessário que seja apenas texto, podendo ser, também, imagens, códigos, vídeos, etc
+- <a>link</a>: <a> é anchor/âncora e representa um hiperlink. temos dois atributos importantes para destacar nesse momento:
+	- href: hiperlink para onde a âncora aponta, podendo ser uma página de outro site, do nosso site mesmo, email (prefixo mailto:) ou telefone (prefixo tel:)
+	- target: faz com que, ao clicar no link, você seja redirecionado para uma outra página (target="_blank")
+- estrutura básica: <a href="link.com" target="_blank">Nome</a>
+
+Imagens:
+- Esse é um elemento que não tem tag de fechamento
+- <img>: representação
+- <img src="image.jpg">: src é obrigatório, ele que dá o caminho da imagem. Para utilizá-lo, caso ele já esteja na pasta do VSCODE, basta adicionar o nome da imagem. Porém, se ele estiver em outra pasta qualquer, é necessário colocar img/, e se for um link de outra página, colocar o https
+- <img alt="Foto">: alt não tem uso obrigatório, mas é altamente recomendado pois melhora a acessibilidade. Suponhamos que a foto não carregue na sua página, por um problema de conexão ou coisa do tipo, o alt estando inserido, mostra a descrição da foto
+- estrutura básica: <img src="image.jpg" alt="Foto">
+
+Listas:
+- Têm o objetivo de agrupar coleções de itens
+- <ul>: lista onde a ordem dos itens não é importante, essas listas são representadas por pontos, circulos ou quadrados
+- <ol>: aqui a ordem importa e a representação se dá por números, letras, algarismos romanos
+- <li>: item da lista. aqui pode conter também outros conteúdos, como paragrafos, imagens e até outras listas
+- todos têm tag de fechamento
+
+
+MINHA PÁGINA:
+- estrutura básica montada
+- no head foi usado o title Angela Silva para ser o nome da aba
+- header é o nosso cabeçalho. como titulo da pagina <h1>, foi posto ''Angie: Learning how to be a dev''. acima do <h1> foi posto uma imagem minha, 100x100 px
+- foi criada uma section com um header e h2 para mostrar a lista de posts
+- foi criado um article post #1 e nele também uma header com h3. abaixo do header foi inserido um <p> como texto e utilizado o aprendizado de links abrindo em outra aba do navegador. abaixo do titulo no article foi inserida uma imagem 960x322.
+- no footer foi posto como lista informações de contato. utilizou-se <ul>, então a lista voltou em pontos. foram listados: email, linkedin e github
+
+Haverão alterações, claro, mas resolvi listar tudo que fiz até o momento \/
+(Tudo isso até o dia 14/06/22 às 17:35 - horário nesse exato momento)
