@@ -1,1 +1,146 @@
+ANOTAÇÕES INICIAIS BÁSICAS CSS3
 
+É uma chamada linguagem de estilo. 
+Estrutura de exemplo:
+a, p, h1, h3{ //seletores, que são elementos html
+	color: blue;
+	font-size: 14px; //esses dois são as declarações
+}
+
+No CSS3 temos ID e Classe, que representam qualquer tipo de elemento. ID sendo representada pela hash # e podendo ser usada apenas uma vez por página, e Classe sendo representada por um ponto .
+
+Quando se cria um layout de um site, o navegador representa cada elemento HTML como uma caixa retangular, chamada de Box Model. Na Box Model temos os seguintes elementos:
+- Margin: espaçamento entre elementos
+- Border: circunda o padding e o conteúdo. Podemos alterar a aparência desse elemento, como por exemplo, cor e largura
+- Padding: espaçamento entre a borda e o conteúdo
+- Content: conteúdo
+
+Exemplo de adição de classe no arquivo.htlm:
+era:
+<article>
+adicionando a classe:
+<article class="post">
+
+ESTILIZANDO ELEMENTOS:
+Padding:
+Temos basicamente 3 formas de alterar o padding:
+1.
+.post{
+padding 10px 5px; //primeiro é eixo y e muda o superior e inferior e segundo é eixo x e muda direita e esquerda
+}
+2.
+.post{
+padding 15px 10px 5px 0; //em ordem: topo, direita, inferior, esquerda. 0 nao precisa de unidade
+}
+3.
+(essa forma é mais utilizada quando apenas uma informação muda dentre as demais tres)
+.post{
+padding-top: 15px;
+padding-right: 11px;
+padding-bottom: 5px;
+padding-left: 10px;
+}
+
+
+Background:
+.post{
+background-color: green;
+background-image: url("bg.jpeg");
+background-position: top;
+}
+No background podemos mudar a cor de fundo:
+.post{
+background-color: green;
+background-color: #008800; //em hexadecimal
+background: green; //usando o apelido
+}
+
+Border:
+Podemos mudar a largura, cor e estilo.
+
+.post{
+border: 3px solid blue;
+border-top: 2px dotted green; //pontilhada
+border-right: 4px dashed pink; //tracejada 
+}
+Podemos definir individualmente também, border-top etc ou separadamente pra nao usar o border, colocando o que você mudar na sequência da palavra: border-width; border-color; border-style. E, ainda, podemos adicionar a direção nessa última forma, como por exemplo: border-top-width.
+
+Border-Radius:
+Arredonda cantos.
+Formas: border-radius: 10px; border-radius: 50%; border-radius: 10% 20% 30% 40%; //mesma ordem que ja foi utilizada, topo, direita, inferior, esquerda
+Para transformar um quadrado em círculo, colocar em 50% o border-radius.
+
+ESTILIZANDO TEXTOS:
+- font-family: verdana; //muda a fonte
+- font-size: 10px; //tamanho
+- font-style: normal; //estilo, pode ter italic etc
+- font-weight: normal; //pode ter bold etc
+- text-transform: uppercase; //lowercase, capitalize
+- texto-decoration: underline //overline, line-through
+
+
+ESTILIZANDO LISTAS:
+- list-style-type: square; //upper-roman (ol), 1F44D (ul)
+- list-style-image: url("rocket.png");
+
+O CSS3 funciona como cascata, então para alterar elementos dentro de uma classe o que acontece é o seguinte:
+Por exemplo:
+<ul class contact_list> //no html
+Para alterar o <li> no CSS: .contact_list li a{}
+
+DIMENSÃO E ALINHAMENTO:
+- width e height: largura e altura, sucessivamente
+- max-width max-height: largura e altura maximas
+- margin: espaçamento entre elementos (margin: auto cria espaçamento dos dois lados)
+- text-align: alinhar textos (left, right, center, justify)
+
+DICA PARA ESTUDAR MAIS: MOZILLA DEVELOPER NETWORK
+
+
+
+MINHA PÁGINA:
+Aqui serão feitas alterações, mas quero escrever o passo-a-passo da criação da minha primeira página como forma de documentar o aprendizado e sua progressão
+- Na head do HTML cria-se um elemento link rel="stylesheet" href"style.css" (rel sendo o tipo de arquivo e href o caminho)
+- Foi criado um arquivo style.css
+- Primeiro formato dele abaixo:
+body{
+background: #ccc // cor cinza
+} 
+
+#title, .subtitle, .post_title{
+color: blue;
+}
+.post_title{
+font-size: 16px;
+font-style: italic;
+}
+.post{
+background: #fff //white
+padding: 10px;
+border: 3px solid #000; //black
+margin: 10px;
+}
+
+Alinhando e melhorando as margens:
+- No CSS post_title: zerou margin, coloca uma inferior
+- No <p> do article criamos uma classe
+	- <p class="post_content">
+	- cria o .post_content no css e seta margin 0 e margin bottom como 15px, mesma coisa feita no post title
+- Adiciona uma classe na imagem do post
+	- <img src="img.jpg" alt="Imagem" class="post_image">
+- Melhoramos as cores da página, setando escolhas melhores
+- Adiciona border-radius no post_content;
+- Adiciona classe na foto principal da página
+	- adiciona borda;
+	- adiciona border-radius; 
+- Altera font-family no body;
+- Abre o #title e altera a fonte e o text-transform 
+- Abre os links (com a?) e seta text-decor com line-through e color #505050;
+- No post_content coloca um text-transform;
+- Adiciona classe na ul
+	- <ul class="contact_list">
+	- list-style-type: none// padding-left: 15px; //nosso padrao
+	- Criou-se outro .contact_list li a{} tirando o text-decoration dos links com =none
+- Mudamos a largura no body com max-width = 900px; //max-weidht em vez de apenas width para quando a tela for menor que os 900px setados, assim a pagina se adequa ao tamanho
+- Post image width 100% //assim respeita o elemento que está por fora
+- No body, margin:auto
