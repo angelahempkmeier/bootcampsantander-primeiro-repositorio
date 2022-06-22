@@ -23,7 +23,7 @@
         <div class="texto-apresentacao">
             <h1>Flex <br>Turismos</h1>
             <p>O melhor serviço para você!</p>
-            <a href="#saibamais">Saiba Mais!</a>
+            <a href="#saibamais" class="btn">Saiba Mais!</a>
         </div>
 
         <div>
@@ -45,73 +45,84 @@
 
     </div>
 
-    <div>
-        <div>
-            <h2>Serviços</h2>
-        </div>
-
-        <div>
+    <div class="container-externo">
+        <div class="flex-container" id="servicos">
             <div>
-                <div><img src="./images/icon-2.png" alt="Hospedagens"></div>
-                <p>Hospedagens</p>
-                <a href="#compraragora">Comprar Agora</a>
+                <h2>Serviços</h2>
             </div>
 
-            <div>
-                <div><img src="./images/icon-1.png" alt="Pacotes de Viagens"></div>
-                <p>Pacotes de Viagens</p>
-                <a href="#compraragora">Comprar Agora</a>
-            </div>
+            <div class="list-servicos">
+                <div class="item-servico">
+                    <div><img src="./images/icon-2.png" alt="Hospedagens"></div>
+                    <p>Hospedagens</p>
+                    <a href="#compraragora">Comprar Agora</a>
+                </div>
 
-            <div>
-                <div><img src="./images/icon-3.png" alt="">Roteiros Personalizados</div>
-                <p>Roteiros Personalizados</p>
-                <a href="#compraragora">Comprar Agora</a>
-            </div>
+                <div class="item-servico">
+                    <div><img src="./images/icon-1.png" alt="Pacotes de Viagens"></div>
+                    <p>Pacotes de Viagens</p>
+                    <a href="#compraragora">Comprar Agora</a>
+                </div>
 
+                <div class="item-servico">
+                    <div><img src="./images/icon-3.png" alt="">Roteiros Personalizados</div>
+                    <p>Roteiros Personalizados</p>
+                    <a href="#compraragora">Comprar Agora</a>
+                </div>
+
+            </div>
         </div>
     </div>
 
-    <div>
-        <div>
-            <h3>Plano 2</h3>
-            <ul>
-                <li>Suporte 24h</li>
-                <li>Serviços de quarto</li>
-                <li>Guia turístico</li>
-            </ul>
-            <a href="#saibamais">Saiba Mais!</a>
-        </div>
+    <div class="flex-container" id="planos">
+        <div><h2>Planos</h2></div>
 
-        <div>
-            <h3>Plano 2</h3>
-            <ul>
-                <li>Suporte 24h</li>
-                <li>Serviços de quarto/li>
-                <li>Guia turístico</li>
-                <li>Roteiro de trilhas</li>
-                <li>Serviços personalizados</li>
-            </ul>
-            <a href="#saibamais">Saiba Mais!</a>
-        </div>
+            <div class="list-planos">
+                <div class="item-plano">
+                    <h3>Plano 1</h3>
+                    <br>
+                    <ul>
+                        <li>Suporte 24h</li>
+                        <li>Serviços de quarto</li>
+                        <li>Guia turístico</li>
+                    </ul>
+                    <a href="#saibamais" class="btn">Saiba Mais!</a>
+                </div>
 
-        <div>
-            <h3>Plano 3</h3>
-            <ul>
-                <li>Suporte 24h</li>
-                <li>Serviços de quarto</li>
-                <li>Guia turístico</li>
-                <li>Roteiro de trilhas</li>
-                <li>Serviços personalizados/li>
-                <li>Área Vip</li>
-            </ul>
-            <a href="#saibamais">Saiba Mais!</a>
+                <div class="item-plano">
+                    <h3>Plano 2</h3>
+                    <br>
+                    <ul>
+                        <li>Suporte 24h</li>
+                        <li>Serviços de quarto/li>
+                        <li>Guia turístico</li>
+                        <li>Roteiro de trilhas</li>
+                        <li>Serviços personalizados</li>
+                    </ul>
+                    <a href="#saibamais" class="btn">Saiba Mais!</a>
+                </div>
+
+                <div class="item-plano">
+                    <h3>Plano 3</h3>
+                    <br>
+                    <ul>
+                        <li>Suporte 24h</li>
+                        <li>Serviços de quarto</li>
+                        <li>Guia turístico</li>
+                        <li>Roteiro de trilhas</li>
+                        <li>Serviços personalizados/li>
+                        <li>Área Vip</li>
+                    </ul>
+                    <a href="#saibamais" class="btn">Saiba Mais!</a>
+                </div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2021 CSS Flexbox</p>
-        <p>Desenvolvido por: Angela Silva</p>
+        <div class="flex-container footer">
+            <p>&copy; 2021 CSS Flexbox</p>
+            <p>Desenvolvido por: Angela Silva</p>
+        </div>
     </footer>
 </body>
 </html>

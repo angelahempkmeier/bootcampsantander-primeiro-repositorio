@@ -13,6 +13,11 @@ ul{
 ul li a{
     text-decoration: none;
 }
+/*isso abaixo div img deixa com que quando diminui o tamanho da tela, os elementos caminhem junto*/
+div img{
+    display: block;
+    width: 100%;
+}
 
 .flex-container{
     display: flex;
@@ -64,7 +69,7 @@ header .menu{
     margin: 10px; /*com zero o flexturismo e o resto do texto fca mais proximo*/
 }
 
-.texto-apresentacao a{
+.btn{
     background-color: #122A57;
     color: white;
     text-align: center;
@@ -93,8 +98,8 @@ header .menu{
     margin-bottom: 20px; /*aumentou distancia entre quem somos e o texto*/
 }
 
-#quem-somos h2 ::before{ /*fazendo o treco | antes do quem somos*/
-    content: ;
+#quem-somos h2::before{ /*fazendo o treco | antes do quem somos*/
+    content: ''; /*tem que ter o content senao nao cria*/
     height: 50px;
     width: 5px;
     margin-right: 5px;
@@ -106,3 +111,144 @@ header .menu{
     margin-bottom: 10px; /*separou os dois p's */
     width: 90%;
 }
+
+#quem-somos img{
+    min-width: 420px;
+}
+
+.container-externo{
+    background-color: #122A57;
+    width: 100%; /*com 50% ele pega tipo metade da tela, com 100% pega a largura toda que queremos usar*/
+}
+
+#servicos{
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+#servicos h2{
+    color: white;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.list-servicos{
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-servicos .item-servico{
+    text-align: center;
+}
+
+.item-servico a{
+    width: 220px;
+    background-color: #fff;
+    border-radius: 30px;
+    height: 50px;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 50px;
+    padding: 5px 10px;
+    color: #122A57;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.item-servico p{
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.item-servico img{
+    width: 30%;
+    margin: auto;
+}
+
+#planos{
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+#planos h2{
+    font-size: 32px;
+}
+
+.list-planos{
+    display: flex;
+    align-items: flex-end; /*alinhado por baixo*/
+    justify-content: space-between;
+}
+
+.item-plano{
+    flex: 1;
+    border: 5px solid #122A57;
+    margin-right: 20px;
+    padding: 10px;
+    max-width: 240px;
+}
+
+.item-plano .btn{
+    margin: auto; /*deixou no meio*/
+    margin-bottom: 20px;
+}
+
+.item-plano h3{
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.item-plano h3::after{
+    content: '';
+    background-color: #122A57;
+    width: 100%;
+    height: 3px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+
+.item-plano ul{
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10PX;
+}
+
+.item-plano ul li{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.item-plano ul li::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #122A57;
+    margin-right: 5px;
+
+}
+
+footer{
+    background-color: #122A57;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+footer .footer{
+    justify-content: space-between;
+    color: white;
+}
+
+/*mobile*/
+
