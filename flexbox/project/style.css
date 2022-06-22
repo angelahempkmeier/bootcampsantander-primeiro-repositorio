@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li a{
+    text-decoration: none;
+}
+
+.flex-container{
+    display: flex;
+    max-width: 992px;
+    margin: auto; /*deixa no centro da pagina*/
+    width: 100%;
+}
+
+header{
+    background-color: #122A57;
+    height: 100px; /*aumenta a altura do header*/
+    display: flex; /*alinhando o container ao centro*/
+    align-items: center;
+    color: #fff;
+
+}
+
+header .list-items{
+    display: flex;
+    width: 100%; /*nao sei direito o que altera*/
+    max-width: 260px; /*distancia entre os nomes dos itens*/
+    justify-content: space-between; /*faz com que os nomes dos items do meni fiquem separadinhos */ 
+    align-items: center; /*alinha os itens ao centro da altura no header*/
+
+}
+
+.list-items li a{ /*tem que ser li a pra mudar a cor deles */
+    color: #fff;
+}
+
+header .menu{
+    justify-content: space-between; /*leva o menu para o lado direito*/
+}
+
+.apresentacao{
+    height: 100vh; /*quando subi pra 300vh simplesmente ficou tudo mt espaco e pra baixo*/
+    align-items: center;
+    justify-content: space-between; /*sem space between fica mt proxiimo a imagine e o texto, com space between a imagem vai à direita*/
+
+}
+
+.apresentacao .texto-apresentacao{
+    min-height: 200px; /*quando aumentei pra 500px subiu o conjunto de texto "FlexTurismo o melhor servico etc saiba mais" na tela */
+}
+
+.texto-apresentacao h1{
+    color: #122A57;
+    font-size: 48px;
+    margin: 10px; /*com zero o flexturismo e o resto do texto fca mais proximo*/
+}
+
+.texto-apresentacao a{
+    background-color: #122A57;
+    color: white;
+    text-align: center;
+    border-radius: 30px; /*coloquei em 100px e visualmente nada se alterou oO*/
+    width: 220px; /*largura*/
+    display: block; /*faz com que o elemento html seja renderizado como bloco. quando a prof adicionou, o botao do saiba mais ficou maior, principalmente mais largo*/
+    text-decoration: none; /*tirou o underline do saiba mais*/
+    height: 50px;
+    line-height: 50px; /*altura do texto dentro do bloco*/
+    margin: 10px; /*se a margin for zero, o botao e o texto 'o melhor serviço' ficam mt prooximos*/
+    margin-bottom: 10px; /*desce o bloco inteiro de conteudo*/
+}
+
+#quem-somos{
+    flex-direction: row-reverse; /*inverte texto e imagem de lugar*/
+    /*height: 100vh; */ /*antes tava com muito espaço entre o bloco de cima e esse q estamos trabalhando, sem o height resolvemos essa situ*/ 
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#quem-somos h2{
+    font-size: 32px;
+    color: #122A57;
+    display: flex;
+    margin-bottom: 20px; /*aumentou distancia entre quem somos e o texto*/
+}
+
+#quem-somos h2 ::before{ /*fazendo o treco | antes do quem somos*/
+    content: ;
+    height: 50px;
+    width: 5px;
+    margin-right: 5px;
+    background-color: #122A57;
+    position: relative;
+}
+
+#quem-somos p{
+    margin-bottom: 10px; /*separou os dois p's */
+    width: 90%;
+}
