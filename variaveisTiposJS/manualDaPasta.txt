@@ -1,0 +1,14 @@
+index1: hoisting com var
+index2: hoisting com let - nao dá boa
+index3: atribuicao e declaracao
+index4: constantes
+index5: tipos e estruturas de dados
+index6: strings, objeto string
+index7: string é iterável
+index8: string - split, includes, startsWhit, endsWith, replace
+index9: numbers
+index10: numbers - math
+index11: numbers - porcentagem
+index12: numbers - converter pra string
+index13: booleans
+index14: array - push
