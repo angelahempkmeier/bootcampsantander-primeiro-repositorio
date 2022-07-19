@@ -14,3 +14,5 @@ index13: booleans
 index14: array - push
 index15: object
 index16: null, undefined, empty
+palindromoSOL1: solucao simples que muito é encontrada no google
+palindromo: solucao com for
