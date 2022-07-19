@@ -12,3 +12,4 @@ index11: numbers - porcentagem
 index12: numbers - converter pra string
 index13: booleans
 index14: array - push
+index15: object
