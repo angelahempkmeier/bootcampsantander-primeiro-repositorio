@@ -1,0 +1,22 @@
+const minhaConta = new ContaCorrente(1,234,true)
+undefined
+minhaConta.saldo
+0
+minhaConta.depositar(1000)
+1000
+minhaConta.sacar(500)
+500
+minhaConta.saldo
+500
+minhaConta.sacar(600)
+'Operação negada'
+
+
+const contaPoup = new ContaPoupanca(1,22)
+undefined
+const ContaUni = new ContaUniversitaria(1,22)
+undefined
+ContaUni.depositar(1000)
+1000
+ContaUni.sacar(550)
+'Operacao negada'
