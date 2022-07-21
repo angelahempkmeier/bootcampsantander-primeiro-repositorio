@@ -44,5 +44,5 @@ function validaArray(arr,num){
      
 }
 
-console.log(validaArray([1,2,3,4,5],5))
+console.log(validaArray([1,2,3,4,5]))
 
